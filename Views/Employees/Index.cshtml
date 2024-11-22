@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "All Employees";
+}
+@model IndexVM[]
+
+<ul>
+    @foreach (var item in Model)
+    {
+        //<li>Employee: @employee.Name, Company: @employee.Company?.CompanyName</li>
+       <li>Employee: @item.Name, Email: @item.Email</li>
+    }
+</ul>

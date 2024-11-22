@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <partial name ="_TimeBox" model=DateTime.Now />
+
+    <h3>@ViewBag.Title</h3>
+    <a asp-controller="Employees" asp-action="Create">Create new employee</a>
+    <a asp-controller="Employees" asp-action="Index">Show all employees</a>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <h5>&#169; 2023 Orkanius</h5>
+    </footer>
+
+    <partial name ="_TimeBox" model=DateTime.Now />
+    @RenderSection("scripts", false)
+</body>
+</html>
